@@ -1,0 +1,104 @@
+﻿<meta charset="UTF-8">
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" 
+
+crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans
+
++SC:wght@400;500&family=Poppins:wght@400;500;600&display=swap" 
+
+rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans SC', sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        .counter-button {
+            cursor: pointer;
+            transition: background-color, color 0.3s ease;
+            font-family: inherit;
+        }
+        .counter-button:hover {
+            background-color: gray !important;
+            color: white !important;
+        }
+        .go-to-tiktok {
+            cursor: pointer;
+            transition: background-color, color 0.3s ease;
+            font-family: inherit;
+        }
+        .go-to-tiktok:hover {
+            background-color: #FE2C55 !important; 
+            color: white !important; 
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome</h1>
+<p>这是颜颜2019的服务器！</p>
+
+<hr>
+<h2>简单计数器</h2>
+当前数字：<span id="num">0</span>
+<br><br>
+<button onclick="num.innerText++" style="margin: 0 5px;" class="counter-button">加1</button>
+<button onclick="num.innerText=0" style="margin: 0 5px;" class="counter-button">重置</button>
+<p><small>（刷新页面会重置为0）</small></p>
+
+<hr>
+<div style="display: flex; align-items: center; justify-content: 
+
+space-between; margin-bottom: 15px;">
+    <div>
+        <h3 class="hover-red" style="margin: 0 0 5px 0;">颜颜2019</h3>
+        <p class="hover-red" style="margin: 0;">抖音号: 40412335430</p>
+    </div>
+    <button onclick="window.open('https://www.douyin.com/user/MS4wLjABAAAAa4P8DqCAyqLJ62ar85ePCGHdGb5jFv9TUehDAVGv2EY?from_tab_name=main', '_blank')" class="go-to-tiktok">
+        跳转到颜颜2019的主页
+    </button>
+</div>
+
+<img src="res/image/yanyan2019.png" alt="颜颜2019最好看" style="max-
+
+width: 300px; border-radius: 10px; margin: 10px 0; border: 3px solid 
+
+#FE2C55;">
+<p><small>如果看到图片无法显示，请检查图片文件是否已放入 res/image/ 文件夹。
+
+</small></p>
+
+<hr>
+<h3>访问文件：</h3>
+<ul style="padding-left: 20px;">
+    <li><a 
+
+href="res/text/i'm_serious._it's_a_file.txt">i'm_serious._it's_a_file.t
+
+xt</a></li>
+    <li><a href="iisstart.htm">iisstart.htm</a> (IIS默认欢迎页)</li>
+</ul>
+
+<hr>
+<p>服务器IP：192.168.3.21</p>
+<p>时间：<span id="time"></span></p>
+
+<script>
+function updateTime() {
+    document.getElementById('time').textContent = new Date
+
+().toLocaleString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+</body>
+</html>
